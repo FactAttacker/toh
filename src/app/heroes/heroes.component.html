@@ -35,3 +35,9 @@
     <input [(ngModel)]="hero.name" placeholder="name">
   </label>
 </div>
+
+<ul>
+  <li *ngFor="let data of heroes"> <!-- heroes[] 배열에 data 루트를 돌아 넣어준다. -->
+    <span>{{data.id}}</span> {{data.name}}
+  </li>
+</ul>

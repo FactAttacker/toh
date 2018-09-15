@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Hero} from "../hero";
+import {HEROES} from "../mock-heroes";
 
 
 @Component({
@@ -15,6 +16,8 @@ export class HeroesComponent implements OnInit {
 
   isSpecial = true;
   isSpecial2 = false;
+
+  heroes = HEROES;
 
   constructor() {
     //window['hero'] = this.hero;
