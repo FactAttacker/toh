@@ -3,7 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  //개발환경
+  production: false,
+  //백앤드를 로컬로 개발한다면 htt://lacalhost:8080
+  HOST : 'htt://lacalhost:8080'
 };
 
 /*

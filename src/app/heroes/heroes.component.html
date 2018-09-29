@@ -1,29 +1,30 @@
-<p>
-  {{hero.id}} : {{hero.name}}
-</p>
+<!--<h2>{{ hero.name }} Details</h2>
 
 <div><span>id: </span>{{hero.id}}</div>
-<div><span>name: </span>{{hero.name}}</div>
+<div><span>name: </span>{{hero.name}}</div>-->
 
-<div>
-  <button [disabled]="isSpecial" >propery binding button </button>
-  <br>
-  <button [disabled]="isSpecial2" >propery binding button </button>
+<router-outlet></router-outlet>
+
+<ul>
+  <li class="d-flex m-1" *ngFor="let h of heroes"
+      [class.selected]="h === selectedHero"
+      routerLink="/heroes/{{h.id}}">
+    <span class="rounded-left p-2 bg-primary text-light">{{h.id}}</span>
+    <div class="rounded-right p-2 bg-light text-dark w-50">{{h.name}}</div>
+  </li>
+</ul>
+
+
+<!--<div>
+  <button [disabled]="isSpecial">propery binding button</button>
 </div>
 
 <div>
-  <br>
-  <button [class.special]="isSpecial" >class binding button </button>
-  <br>
-  <button [class.special]="isSpecial2" >class binding button </button>
-  <br>
+  <div [class.special]="isSpecial">class binding button</div>
 </div>
 
 <div>
-  <br>
-  <button [style.color]="isSpecial ? 'red' : 'blue' " >style binding button </button>
-  <br>
-  <button [style.color]="isSpecial2 ? 'red' : 'blue' " >style binding button </button>
+  <button [style.color]="isSpecial ? 'red' : 'green'">style binding button</button>
 </div>
 
 <div>
@@ -34,10 +35,4 @@
   <label>name:
     <input [(ngModel)]="hero.name" placeholder="name">
   </label>
-</div>
-
-<ul>
-  <li *ngFor="let data of heroes"> <!-- heroes[] 배열에 data 루트를 돌아 넣어준다. -->
-    <span>{{data.id}}</span> {{data.name}}
-  </li>
-</ul>
+</div>-->
